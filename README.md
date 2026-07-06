@@ -1,18 +1,15 @@
-## Getting Started
+# Evaluación Set y Map
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Método A: filtrarYOrdenarTickets
 
-## Folder Structure
+Implementacion utilizada: TreeMap
 
-The workspace contains two folders by default, where:
+Explicación: Usé TreeMap por que no permite elementos duplicados y le da un orden a la información ingresada, además de poder usar lambda para dirle "quiero que ordenes de esta manera".
+Ordenará tomando como primer criterio la prioridad, va a comparar un ticket con otro, obtendrá la el valor de la prioridad de cada uno, devolverá <0 si es que el primero es menor al segundo, >0 si el primero es mayo al segundo y devolverá 0 si ambos son iguales. Si devuelve cero, pasará al segundo criterio, que es el de los codigos, usando el compareTo, verificará si dos strings son iguales. Después irá añadiendo al Set verificando la prioridad minima.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Método B: agruparCodigosPorPrioridad
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Implementacion utilizada para el map: HashMap
+Implementacion utilizada para los sets internos: HashSet
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Explicación: Usé HashMap y HashSet en ambos casos ya que no permiten elementos duplicados.
